@@ -22,7 +22,7 @@ Use any website with an alerts option.
 - STEP 8: Accept alert
 
 ## Answer
-I used a ["draw.io"](https://app.diagrams.net/) website
+I used a ["demoqa"](https://demoqa.com/alerts) website
 
 ### First:
 Setup Latest Web Driver for Chrome  Driver.
@@ -38,15 +38,15 @@ Add them as a library in the classpath of the project
 ### Third:
 I opened the website, then take web elements, and then add them to the code.
 
-I used `Actions` class and `dragAndDropBy` method
+I used `getWindowHandle` method to I can go back to the main window after the alert close.
 
 ```md
-Actions a = new Actions(driver);
-a.dragAndDropBy(source, xoffset , yoffset).build().perform();
+String mainWindow = driver.getWindowHandle();
+driver.switchTo().window(mainWindow);
 ```
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/48597284/183253276-9dcde69c-4b86-4454-b847-0fdfbe34d52f.png" width=60% height=60%>
+<img src="https://user-images.githubusercontent.com/48597284/183262075-1e61b10f-1a3d-491c-a957-0fec79018f6b.png" width=60% height=60%>
 </p>
 
 
@@ -54,12 +54,9 @@ a.dragAndDropBy(source, xoffset , yoffset).build().perform();
 ## Output Screenshots:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/48597284/183253300-d218fc1d-db0d-46d2-a184-643cb5858cfe.png" width=80% height=80%>
+<img src="https://user-images.githubusercontent.com/48597284/183262086-ab51da27-a092-4a51-9628-05bd170b010d.png" width=80% height=80%>
 
 
-
-https://user-images.githubusercontent.com/48597284/183253405-6f6eb4e8-22db-4815-81e4-9835a2e4b355.mp4
-
-
+https://user-images.githubusercontent.com/48597284/183262155-e9b54ada-1207-4318-92f6-3cef3c95e3eb.mp4
 
 </p>
